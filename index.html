@@ -8,17 +8,10 @@
 <body>
     <h1>File Index</h1>
     <ul>
-        <?php
-        $folder = "."; // Specify the folder path (current folder in this example)
-        $files = scandir($folder); // Get files and directories in the folder
-
-        foreach ($files as $file) {
-            if ($file !== "." && $file !== "..") { // Exclude current and parent directory
-                echo "<li><a href='$file'>$file</a></li>"; // Display each file as a link
-            }
-        }
-        ?>
+        <li><a href="file1.txt">file1.txt</a></li>
+        <li><a href="file2.html">file2.html</a></li>
+        <li><a href="image1.png">image1.png</a></li>
+        <!-- Add more files manually -->
     </ul>
 </body>
 </html>
-
