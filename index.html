@@ -1,1 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folder File Index</title>
+</head>
+<body>
+    <h1>File Index</h1>
+    <ul>
+        <?php
+        $folder = "."; // Specify the folder path (current folder in this example)
+        $files = scandir($folder); // Get files and directories in the folder
+
+        foreach ($files as $file) {
+            if ($file !== "." && $file !== "..") { // Exclude current and parent directory
+                echo "<li><a href='$file'>$file</a></li>"; // Display each file as a link
+            }
+        }
+        ?>
+    </ul>
+</body>
+</html>
 
